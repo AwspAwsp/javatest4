@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.javatest4.exam1.mapper.FileMapper" >
+
+    <select id="Login"  resultType="Actor">
+        SELECT * FROM actor where last_name=#{last_name} and first_name=#{first_name}
+    </select>
+    <select id="findFile"  resultType="File">
+        SELECT * FROM film
+    </select>
+    <select id="findId"  resultType="Actor">
+        SELECT * FROM actor WHERE actor_id=#{actor_id}
+    </select>
+    <!--插入没写完-->
+    <!--<insert id="saveActor"  keyProperty="Actor">-->
+        <!--insert into actor values (#{id},#{name},#{money})-->
+    <!--</insert>-->
+    <update id="updateActor" parameterType="Actor">
+        update actor set first_name=#{first_name},last_name=#{last_name},last_update=#{last_update} where id=#{id}
+    </update>
+
+    <delete id="deleteActor" parameterType="Actor">
+        delete from actor where actor_id=#{actor_id}
+    </delete>
+</mapper>
