@@ -1,0 +1,17 @@
+#server:
+#  port: 18080
+#  servlet:
+#    context-path: /myweb
+#  datasource:
+#    username: ${MYSQL_ROOT:root}
+#    password: ${MYSQL_PASSWORD:wsp25314}
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://${MYSQL_IP:127.0.0.1}:${PORT:3306}/${SCHEMA:sakila}?useSSL=false
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-handlers-package: com.example.javatest4.exam1.javaBean
+#
+#
+#
+#
+#
